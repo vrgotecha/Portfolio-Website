@@ -1,56 +1,32 @@
 import React from 'react'
 import './portfolio.css'
-import IMG1 from '../../assets/portfolio1.jpg'
-import IMG2 from '../../assets/portfolio2.jpg'
-import IMG3 from '../../assets/portfolio3.jpg'
-import IMG4 from '../../assets/portfolio4.jpg'
-import IMG5 from '../../assets/portfolio5.png'
-import IMG6 from '../../assets/portfolio6.jpg'
+import IMG1 from '../../assets/DisnyHotstarClone.png'
+import IMG2 from '../../assets/TaskManagement.png'
+import IMG3 from '../../assets/AI_LinearRegressionProject.png'
 
 // DO NOT USE THE IMAGES IN PRODUCTION
 const data = [
   {
     id: 1,
     image: IMG1,
-    title: 'Crypto Currency Dashboard & Financial Visualization',
-    github: "https://github.com/vrgotecha",
-    demo: 'https://dribbble.com/shots/16673715-Crypto-currency-dashboards-and-financial-data-visualization'
+    title: 'Disney-Hotstar Clone',
+    github: "https://github.com/vrgotecha/Disney-Hotstar-Clone",
+    demo: 'https://vivekgotecha-disney-hotstar-project.netlify.app/'
   },
   {
     id: 2,
     image: IMG2,
-    title: 'Charts templates & infographics in Figma',
-    github: "https://github.com/vrgotecha",
-    demo: 'https://dribbble.com/shots/16580766-Orion-UI-kit-Charts-templates-infographics-in-Figma'
+    title: 'Task Management System',
+    github: "https://github.com/vrgotecha/Task-Manager/tree/master",
+    demo: 'https://vivekgotecha-disney-hotstar-project.netlify.app/'
   },
   {
     id: 3,
     image: IMG3,
-    title: 'Figma dashboard UI kit for data design web apps',
-    github: "https://github.com/vrgotecha",
-    demo: 'https://dribbble.com/shots/17290917-Eclipse-Figma-dashboard-UI-kit-for-data-design-web-apps'
-  },
-  {
-    id: 4,
-    image: IMG4,
-    title: 'Maintaining tasks and tracking progress',
-    github: "https://github.com/vrgotecha",
-    demo: 'https://dribbble.com/shots/16955822-Maintaining-tasks-and-tracking-progress'
-  },
-  {
-    id: 5,
-    image: IMG5,
-    title: 'Charts templates & infographics in Figma',
-    github: "https://github.com/vrgotecha",
-    demo: 'https://dribbble.com/shots/16541289-Orion-UI-kit-Charts-templates-infographics-in-Figma'
-  },
-  {
-    id: 6,
-    image: IMG6,
-    title: 'Charts templates & infographics in Figma',
-    github: "https://github.com/vrgotecha",
-    demo: 'https://dribbble.com/shots/15887665-Orion-UI-kit-Charts-templates-infographics-in-Figma'
-  },
+    title: 'Artifical Intelligence Projects',
+    github: "https://github.com/vrgotecha/Aritifical_Intelligence_Projects",
+    demo: 'https://drive.google.com/drive/folders/1Y7V5ZoxJzkERWbX_cyu4C0LrOkBwz8mP'
+  }
 ]
 
 const Portfolio = () => {

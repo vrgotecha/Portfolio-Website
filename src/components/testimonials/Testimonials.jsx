@@ -18,30 +18,30 @@ import 'swiper/css/pagination';
 const data = [
   {
     avatar: AVTR1,
-    name: 'Tina Snow',
-    review: 'Modi alias animi dolorem aliquam ea eum beatae maiores, consectetur praesentium quibusdam, commodi velit porro blanditiis consequatur qui molestiae. Dolorem, perspiciatis aspernatur labore distinctio ratione delectus voluptatem dolores deserunt explicabo nostrum ducimus quasi?'
+    name: 'Aarushi Singh',
+    review: "Working with Vivek Gotecha was an absolute pleasure! His attention to detail and creativity brought my project to life."
   },
   {
     avatar: AVTR2,
-    name: 'Shatta Wale',
-    review: 'Modi alias animi dolorem aliquam ea eum beatae maiores, consectetur praesentium quibusdam, commodi velit porro blanditiis consequatur qui molestiae. Dolorem, perspiciatis aspernatur labore distinctio ratione delectus voluptatem dolores deserunt explicabo nostrum ducimus quasi?'
+    name: 'Omkar Rajmane',
+    review: "I'm impressed by Vivek Gotecha's professionalism and dedication. I look forward to collaborating with him again."
   },
   {
     avatar: AVTR3,
-    name: 'Kwame Despite',
-    review: 'Modi alias animi dolorem aliquam ea eum beatae maiores, consectetur praesentium quibusdam, commodi velit porro blanditiis consequatur qui molestiae. Dolorem, perspiciatis aspernatur labore distinctio ratione delectus voluptatem dolores deserunt explicabo nostrum ducimus quasi?'
+    name: 'Parthav Deshpande',
+    review: "I can't thank Vivek Gotecha enough for his outstanding work on my project. I highly endorse him!"
   },
   {
     avatar: AVTR4,
-    name: 'Nana Ama McBrown',
-    review: 'Modi alias animi dolorem aliquam ea eum beatae maiores, consectetur praesentium quibusdam, commodi velit porro blanditiis consequatur qui molestiae. Dolorem, perspiciatis aspernatur labore distinctio ratione delectus voluptatem dolores deserunt explicabo nostrum ducimus quasi?'
+    name: 'Mustafa Shaikh',
+    review: 'He brought creativity, skill, and passion to the table, resulting in an exceptional outcome. I wholeheartedly recommend them!'
   },
 ]
 
 const Testimonials = () => {
   return (
     <section id='testimonials'>
-      <h5>Review from clients</h5>
+      <h5>Review from peers</h5>
       <h2>Testimonials</h2>
 
       <Swiper className="container testimonials__container"
