@@ -34,7 +34,7 @@ const data = [
   {
     avatar: AVTR4,
     name: 'Mustafa Shaikh',
-    review: 'He brought creativity, skill, and passion to the table, resulting in an exceptional outcome. I wholeheartedly recommend them!'
+    review: 'He brought creativity, skill, and passion to the table, resulting in an exceptional outcome. I wholeheartedly recommend him!'
   },
 ]
 
