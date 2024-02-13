@@ -1,26 +1,30 @@
-import React from 'react'
-import './contact.css'
-import { MdOutlineMail } from "react-icons/md"
-import { RiMessengerLine } from "react-icons/ri"
-import { BsWhatsapp } from "react-icons/bs"
+import React, { useState } from 'react';
+import './contact.css';
+import { MdOutlineMail } from "react-icons/md";
+import { RiMessengerLine } from "react-icons/ri";
+import { BsWhatsapp } from "react-icons/bs";
 import { useRef } from 'react';
-import emailjs from 'emailjs-com'
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
-  const form = useRef()
+  const form = useRef();
+  const [successMessage, setSuccessMessage] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs.sendForm('service_fkpfdwe', 'template_tyliivf', form.current, 'dvsgrhv9btWmS62nN')
+      .then(() => {
+        setSuccessMessage(true);
+        setTimeout(() => setSuccessMessage(false), 5000); // Hide success message after 5 seconds
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+      });
 
-    e.target.reset()
-
-    if (e){
-      console.log(e.message);
-    }
-      
+    e.target.reset();
   };
+
   return (
     <section id='contact'>
       <h5>Get In Touch</h5>
@@ -54,9 +58,14 @@ const Contact = () => {
           <textarea name="message" rows="7" placeholder='Your Message' required></textarea>
           <button type='submit' className='btn btn-primary'>Send Message</button>
         </form>
+        {successMessage && (
+          <div className="alert alert-success mt-3" role="alert">
+            Message sent successfully!
+          </div>
+        )}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
