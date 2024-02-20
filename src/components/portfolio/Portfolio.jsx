@@ -18,7 +18,7 @@ const data = [
     image: IMG2,
     title: 'Task Management System',
     github: "https://github.com/vrgotecha/Task-Manager/tree/master",
-    demo: 'https://vivekgotecha-disney-hotstar-project.netlify.app/'
+    demo: 'https://task-management-system-without-json.netlify.app/'
   },
   {
     id: 3,
