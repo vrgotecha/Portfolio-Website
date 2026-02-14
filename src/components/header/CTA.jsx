@@ -1,5 +1,5 @@
 import React from 'react'
-import CV from '../../assets/VivekGotechaReume.pdf'
+import CV from '../../assets/VivekGotechaOldResume.pdf'
 const CTA = () => {
   return (
     <div className='cta'>
@@ -10,4 +10,5 @@ const CTA = () => {
 }
 
 export default CTA
+
 
