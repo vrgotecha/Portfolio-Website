@@ -13,19 +13,23 @@
 }
 
 .testimonial{
-    background: var(--color-bg-variant);
+    background: rgba(17, 26, 49, 0.82);
     text-align: center;
     padding: 2rem;
     border-radius: 2rem;
     user-select: none;
+    border: 1px solid rgba(125, 211, 252, 0.2);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(10px);
 }
 
 .client__review{
     color: var(--color-light);
-    font-weight: 300;
+    font-weight: 400;
     display: block;
     width: 80%;
     margin: 0.8rem auto 0;
+    font-size: 0.95rem;
 }
 
 .swiper-pagination-clickable .swiper-pagination-bullet{

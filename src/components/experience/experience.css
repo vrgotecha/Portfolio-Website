@@ -5,17 +5,20 @@
 }
 
 .experience__container > div {
-    background: var(--color-bg-variant);
+    background: rgba(17, 26, 49, 0.82);
     padding: 2.4rem 5rem;
     border-radius: 2rem;
-    border: 1px solid transparent;
+    border: 1px solid rgba(125, 211, 252, 0.2);
     transition: var(--transition);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(8px);
 }
 
 .experience__container>div:hover{
-    background: transparent;
+    background: rgba(125, 211, 252, 0.08);
     border-color: var(--color-primary-variant);
     cursor: default;
+    transform: translateY(-5px);
 }
 
 .experience__container > div h3{

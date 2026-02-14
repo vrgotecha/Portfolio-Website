@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Sora:wght@300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -24,10 +24,25 @@
     --container-width-lg: 75%;
     --container-width-md: 86%;
     --container-width-sm: 90%;
+
+    --fs-body: 1.05rem;
+    --fs-small: 0.92rem;
+    --fs-h5: clamp(0.95rem, 1vw, 1.1rem);
+    --fs-h4: clamp(1.15rem, 1.4vw, 1.35rem);
+    --fs-h3: clamp(1.35rem, 2vw, 1.7rem);
+    --fs-h2: clamp(1.9rem, 3.2vw, 2.55rem);
+    --fs-h1: clamp(2.5rem, 6vw, 4.3rem);
+
+    --radius-md: 1rem;
+    --radius-lg: 1.4rem;
+    --radius-xl: 2rem;
+    --shadow-soft: 0 14px 34px rgba(6, 11, 29, 0.36);
+    --shadow-pop: 0 18px 40px rgba(125, 211, 252, 0.22);
 }
 
 html{
     scroll-behavior: smooth;
+    font-size: 17px;
 }
 
 ::-webkit-scrollbar{
@@ -35,13 +50,15 @@ html{
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Sora', 'Poppins', sans-serif;
+    font-size: var(--fs-body);
     background: var(--color-bg);
     color: var(--color-white);
-    line-height: 1.7;
+    line-height: 1.75;
     background-image:
-      radial-gradient(circle at 15% 20%, rgba(125, 211, 252, 0.22), transparent 35%),
-      radial-gradient(circle at 85% 0%, rgba(167, 139, 250, 0.22), transparent 30%),
+      radial-gradient(circle at 8% 15%, rgba(125, 211, 252, 0.3), transparent 28%),
+      radial-gradient(circle at 92% 8%, rgba(34, 211, 238, 0.2), transparent 30%),
+      radial-gradient(circle at 50% 100%, rgba(125, 211, 252, 0.14), transparent 42%),
       url('../src/assets/bg-texture.png');
     background-attachment: fixed;
 }
@@ -53,12 +70,37 @@ body{
 }
 
 h1, h2, h3, h4, h5{
-    font-weight: 500;
-    letter-spacing: 0.01em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1.25;
 }
 
 h1{
-    font-size: 2.5rem;
+    font-size: var(--fs-h1);
+}
+
+h2{
+    font-size: var(--fs-h2);
+}
+
+h3{
+    font-size: var(--fs-h3);
+}
+
+h4{
+    font-size: var(--fs-h4);
+}
+
+h5{
+    font-size: var(--fs-h5);
+}
+
+p{
+    font-size: var(--fs-body);
+}
+
+small{
+    font-size: var(--fs-small);
 }
 
 section{
@@ -76,13 +118,21 @@ section > h2{
     margin-bottom: 3rem;
 }
 
+section > h5{
+    margin-bottom: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
 .text-light{
     color: var(--color-light);
+    font-size: 0.98rem;
 }
 
 a{
     color: var(--color-primary);
     transition: var(--transition);
+    font-weight: 500;
 }
 
 a:hover{
@@ -93,17 +143,19 @@ a:hover{
     width: max-content;
     display: inline-block;
     color: var(--color-primary);
-    padding: 0.75rem 1.2rem;
-    border-radius: 0.7rem;
+    padding: 0.85rem 1.35rem;
+    border-radius: 0.9rem;
     cursor: pointer;
     border: 1px solid var(--color-primary);
     transition: var(--transition);
-    box-shadow: 0 8px 30px rgba(8, 11, 30, 0.32);
+    box-shadow: var(--shadow-soft);
+    font-size: 0.96rem;
+    letter-spacing: 0.01em;
 }
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(125, 211, 252, 0.25);
+    box-shadow: var(--shadow-pop);
 }
 
 .btn-primary{
@@ -120,6 +172,10 @@ img{
 
 /* MEDIA QUERIES (MEDIUM DEVICES) */
 @media screen and (max-width: 1024px){
+    html{
+        font-size: 16px;
+    }
+
     .container{
         width: var(--container-width-md);
     }
@@ -131,6 +187,10 @@ img{
 
 /* MEDIA QUERIES (SMALL DEVICES) */
 @media screen and (max-width: 600px){
+    html{
+        font-size: 15px;
+    }
+
     .container{
         width: var(--container-width-sm);
     }

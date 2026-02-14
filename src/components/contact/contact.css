@@ -12,17 +12,20 @@
 }
 
 .contact__option{
-    background: var(--color-bg-variant);
+    background: rgba(17, 26, 49, 0.78);
     padding: 1.2rem;
     border-radius: 1.2rem;
     text-align: center;
-    border: 1px solid transparent;
+    border: 1px solid rgba(125, 211, 252, 0.18);
     transition: var(--transition);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(10px);
 }
 
 .contact__option:hover{
-    background: transparent;
+    background: rgba(125, 211, 252, 0.1);
     border-color: var(--color-primary-variant);
+    transform: translateY(-5px);
 }
 
 .contact__option-icon{
@@ -33,7 +36,7 @@
 .contact__option a{
     margin-top: 0.7rem;
     display: inline-block;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 /* ======== FORM ========== */
@@ -46,11 +49,17 @@ form{
 input, textarea{
     width: 100%;
     padding: 1.5rem;
-    border-radius: 0.5rem;
-    background: transparent;
+    border-radius: 0.9rem;
+    background: rgba(17, 26, 49, 0.7);
     border: 2px solid var(--color-primary-variant);
     resize: none;
     color: var(--color-white);
+    font-size: 0.96rem;
+}
+
+input:focus, textarea:focus{
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(125, 211, 252, 0.18);
 }
 
 /* MEDIA QUERIES (MEDIUM DEVICES) */
