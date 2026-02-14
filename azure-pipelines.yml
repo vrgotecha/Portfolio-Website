@@ -1,0 +1,30 @@
+trigger:
+- master
+
+pr:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  node_version: '18.x'
+
+steps:
+- task: NodeTool@0
+  displayName: 'Use Node.js $(node_version)'
+  inputs:
+    versionSpec: '$(node_version)'
+
+- script: npm ci
+  displayName: 'Install dependencies'
+
+- script: npm run build
+  displayName: 'Build app'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish build artifact'
+  inputs:
+    PathtoPublish: 'build'
+    ArtifactName: 'react-build'
+    publishLocation: 'Container'
