@@ -21,24 +21,24 @@ const About = () => {
           <div className="about__cards">
             <article className='about__card'>
               <FaAward className='aobut__icon'/>
-              <h5>Skills</h5>
-              <small>Keen learner with a passion for web development</small>
+              <h5>Experience</h5>
+              <small>3+ Years </small>
             </article>
 
             <article className='about__card'>
               <FiUsers className='aobut__icon'/>
-              <h5>Projects</h5>
-              <small>Hands-on experience in building small web projects</small>
+              <h5>Clients</h5>
+              <small>200+ WorldWide </small>
             </article>
 
             <article className='about__card'>
               <VscFolderLibrary className='aobut__icon'/>
-              <h5>Education</h5>
-              <small>Currently pursuing B.E from Pune Institute Of Computer Technology</small>
+              <h5>Projects</h5>
+              <small>80+ Completed </small>
             </article>
           </div>
           <p>
-            As a budding web developer, I am passionate about crafting engaging and user-friendly web experiences. My journey in web development has just begun, and I am eager to explore new technologies and expand my skill set. I believe in continuous learning and am excited about the opportunities ahead.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, ullam animi nobis itaque natus voluptatem consectetur vero, est rerum corrupti, deserunt sunt possimus eos reprehenderit provident nesciunt? Sapiente, vitae ea!
           </p>
 
           <a href="#contact" className='btn btn-primary'>Let's Connect</a>

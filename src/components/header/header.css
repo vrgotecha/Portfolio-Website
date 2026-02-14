@@ -10,6 +10,19 @@ header {
     position: relative;
 }
 
+.header__container h1 {
+    font-size: 3.2rem;
+    line-height: 1.1;
+    background: linear-gradient(120deg, var(--color-white), var(--color-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header__container .text-light {
+    max-width: 40rem;
+    margin: 0.8rem auto 0;
+}
+
 /*  CTA */
 .cta{
     margin-top: 2.5rem;
@@ -38,7 +51,7 @@ header {
 
 /*  ME */
 .me{
-    background: linear-gradient(var(--color-primary), transparent);
+    background: linear-gradient(180deg, rgba(125, 211, 252, 0.9), rgba(167, 139, 250, 0.25), transparent);
     width: 22rem;
     height: 30rem;
     position: absolute;
@@ -47,6 +60,8 @@ header {
     border-radius: 12rem 12rem 0 0;
     overflow: hidden;
     padding: 5rem 1.5rem 1.5rem 1.5rem;
+    border: 1px solid rgba(125, 211, 252, 0.4);
+    box-shadow: 0 25px 60px rgba(7, 11, 27, 0.55);
 }
 
 /* Scroll down */
@@ -58,6 +73,7 @@ header {
     transform: rotate(90deg);
     font-weight: 300;
     font-size: 0.9rem;
+    color: var(--color-light);
 }
 
 /* MEDIA QUERIES (MEDIUM DEVICES) */
