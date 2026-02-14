@@ -9,22 +9,60 @@ pool:
 
 variables:
   node_version: '18.x'
+  azure_service_connection: 'YOUR_AZURE_SERVICE_CONNECTION'
+  app_service_name: 'YOUR_APP_SERVICE_NAME'
 
-steps:
-- task: NodeTool@0
-  displayName: 'Use Node.js $(node_version)'
-  inputs:
-    versionSpec: '$(node_version)'
+stages:
+- stage: Build
+  displayName: Build Stage
+  jobs:
+  - job: BuildReact
+    displayName: Build React App
+    steps:
+    - task: NodeTool@0
+      displayName: 'Use Node.js $(node_version)'
+      inputs:
+        versionSpec: '$(node_version)'
 
-- script: npm ci
-  displayName: 'Install dependencies'
+    - script: npm ci
+      displayName: Install dependencies
 
-- script: npm run build
-  displayName: 'Build app'
+    - script: npm run build
+      displayName: Build app
 
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish build artifact'
-  inputs:
-    PathtoPublish: 'build'
-    ArtifactName: 'react-build'
-    publishLocation: 'Container'
+    - task: ArchiveFiles@2
+      displayName: Archive build output
+      inputs:
+        rootFolderOrFile: 'build'
+        includeRootFolder: false
+        archiveType: 'zip'
+        archiveFile: '$(Build.ArtifactStagingDirectory)/react-build.zip'
+        replaceExistingArchive: true
+
+    - task: PublishPipelineArtifact@1
+      displayName: Publish build artifact
+      inputs:
+        targetPath: '$(Build.ArtifactStagingDirectory)/react-build.zip'
+        artifact: 'react-build'
+
+- stage: Deploy
+  displayName: Deploy Stage
+  dependsOn: Build
+  condition: succeeded()
+  jobs:
+  - deployment: DeployToAppService
+    displayName: Deploy to Azure App Service
+    environment: 'production'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - download: current
+            artifact: react-build
+
+          - task: AzureWebApp@1
+            displayName: Deploy package to App Service
+            inputs:
+              azureSubscription: '$(azure_service_connection)'
+              appName: '$(app_service_name)'
+              package: '$(Pipeline.Workspace)/react-build/react-build.zip'
