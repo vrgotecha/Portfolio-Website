@@ -22,23 +22,23 @@ const About = () => {
             <article className='about__card'>
               <FaAward className='about__icon'/>
               <h5>Experience</h5>
-              <small>3+ Years </small>
+              <small>Fresher | Entry-Level </small>
             </article>
 
             <article className='about__card'>
               <FiUsers className='about__icon'/>
               <h5>Clients</h5>
-              <small>200+ WorldWide </small>
+              <small>Academic & Personal Projects </small>
             </article>
 
             <article className='about__card'>
               <VscFolderLibrary className='about__icon'/>
               <h5>Projects</h5>
-              <small>80+ Completed </small>
+              <small>8+ Built </small>
             </article>
           </div>
           <p>
-            I build user-focused web experiences with React, Node.js, and modern frontend tooling. My approach blends performance, accessibility, and thoughtful design to deliver products that not only look great, but also solve real business problems.
+            I am a passionate fresher focused on building responsive and user-friendly web applications using React, JavaScript, HTML, and CSS. I enjoy turning ideas into clean, functional interfaces and continuously improving my skills through hands-on projects.
           </p>
 
           <a href="#contact" className='btn btn-primary'>Let's Connect</a>
