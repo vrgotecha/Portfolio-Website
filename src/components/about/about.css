@@ -31,20 +31,18 @@
 }
 
 .about__card{
-    background: rgba(17, 26, 49, 0.8);
-    border: 1px solid rgba(125, 211, 252, 0.15);
+    background: var(--color-bg-variant);
+    border: 1px solid transparent;
     border-radius: 1rem;
     padding: 2rem;
     text-align: center;
     transition: var(--transition);
-    box-shadow: 0 14px 30px rgba(8, 13, 35, 0.35);
 }
 
 .about__card:hover{
-    background: rgba(125, 211, 252, 0.08);
+    background: transparent;   
     border-color: var(--color-primary-variant);
     cursor: default;
-    transform: translateY(-6px);
 }
 
 .about__icon {
@@ -65,7 +63,6 @@
 .about__content p{
     margin: 2rem 0 2.6rem;
     color: var(--color-light);
-    font-size: 1.02rem;
 }
 
 /* MEDIA QUERIES (MEDIUM DEVICES) */
