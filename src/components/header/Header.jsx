@@ -14,16 +14,16 @@ const Header = () => {
         <HeaderSocials/>
         <div className="header__highlights">
           <article>
-            <h6>3+ Years</h6>
-            <small>Experience</small>
+            <h6>Fresher</h6>
+            <small>Entry-level fullstack developer</small>
           </article>
           <article>
-            <h6>20+ Projects</h6>
-            <small>Built and shipped</small>
+            <h6>Strong Foundation</h6>
+            <small>React, Node.js, and modern web basics</small>
           </article>
           <article>
-            <h6>Fullstack</h6>
-            <small>React, Node, and cloud</small>
+            <h6>Open To Work</h6>
+            <small>Ready to learn, contribute, and grow fast</small>
           </article>
         </div>
 
