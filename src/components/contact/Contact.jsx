@@ -9,20 +9,32 @@ import emailjs from 'emailjs-com';
 const Contact = () => {
   const form = useRef();
   const [successMessage, setSuccessMessage] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+  const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setSuccessMessage(false);
+    setErrorMessage('');
 
-    emailjs.sendForm('service_fkpfdwe', 'template_tyliivf', form.current, 'dvsgrhv9btWmS62nN')
+    if (!serviceId || !templateId || !publicKey) {
+      setErrorMessage('Email service is not configured. Please try again later.');
+      return;
+    }
+
+    emailjs.sendForm(serviceId, templateId, form.current, publicKey)
       .then(() => {
         setSuccessMessage(true);
-        setTimeout(() => setSuccessMessage(false), 5000); // Hide success message after 5 seconds
+        e.target.reset();
+        setTimeout(() => setSuccessMessage(false), 5000);
       })
       .catch((error) => {
         console.error('Error sending email:', error);
+        setErrorMessage('Failed to send message. Please use the direct email option.');
       });
-
-    e.target.reset();
   };
 
   return (
@@ -61,6 +73,11 @@ const Contact = () => {
         {successMessage && (
           <div className="alert alert-success mt-3" role="alert">
             Message sent successfully!
+          </div>
+        )}
+        {errorMessage && (
+          <div className="alert alert-danger mt-3" role="alert">
+            {errorMessage}
           </div>
         )}
       </div>
