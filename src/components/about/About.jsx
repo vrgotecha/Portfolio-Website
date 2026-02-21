@@ -1,6 +1,5 @@
 import React from 'react'
 import './about.css'
-import ME from '../../assets/Vivek_C-DAC_IMG-Resized.png'
 import { FaAward } from "react-icons/fa"
 import { FiUsers } from "react-icons/fi"
 import { VscFolderLibrary } from "react-icons/vsc"
@@ -14,7 +13,7 @@ const About = () => {
       <div className="container about__container">
         <div className="about__me">
           <div className="about__me-image">
-            <img src={ME} alt="Vivek Gotecha portrait" />
+            <img src="/vg-logo.webp" alt="Vivek Gotecha" />
           </div>
         </div>
         <div className="about__content">
