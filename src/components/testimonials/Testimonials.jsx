@@ -1,9 +1,5 @@
 import React from 'react'
 import './testimonials.css'
-import AVTR1 from '../../assets/avatar1.jpg'
-import AVTR2 from '../../assets/avatar2.jpg'
-import AVTR3 from '../../assets/avatar3.jpg'
-import AVTR4 from '../../assets/avatar4.jpg'
 
 // import Swiper core and required modules
 import { Pagination, Autoplay } from 'swiper/modules';
@@ -18,22 +14,22 @@ import 'swiper/css/pagination';
 
 const data = [
   {
-    avatar: AVTR1,
+    avatar: 'https://ui-avatars.com/api/?name=Aarushi+Singh&background=0b1120&color=7dd3fc&bold=true',
     name: 'Aarushi Singh',
     review: "Working with Vivek Gotecha was an absolute pleasure! His attention to detail and creativity brought my project to life."
   },
   {
-    avatar: AVTR2,
+    avatar: 'https://ui-avatars.com/api/?name=Omkar+Rajmane&background=0b1120&color=a78bfa&bold=true',
     name: 'Omkar Rajmane',
     review: "I'm impressed by Vivek Gotecha's professionalism and dedication. I look forward to collaborating with him again."
   },
   {
-    avatar: AVTR3,
+    avatar: 'https://ui-avatars.com/api/?name=Parthav+Deshpande&background=0b1120&color=67e8f9&bold=true',
     name: 'Parthav Deshpande',
     review: "I can't thank Vivek Gotecha enough for his outstanding work on my project. I highly endorse him!"
   },
   {
-    avatar: AVTR4,
+    avatar: 'https://ui-avatars.com/api/?name=Mustafa+Shaikh&background=0b1120&color=93c5fd&bold=true',
     name: 'Mustafa Shaikh',
     review: 'He brought creativity, skill, and passion to the table, resulting in an exceptional outcome. I wholeheartedly recommend him!'
   },

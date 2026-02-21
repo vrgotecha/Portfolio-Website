@@ -58,8 +58,7 @@ body{
     background-image:
       radial-gradient(circle at 8% 15%, rgba(125, 211, 252, 0.3), transparent 28%),
       radial-gradient(circle at 92% 8%, rgba(34, 211, 238, 0.2), transparent 30%),
-      radial-gradient(circle at 50% 100%, rgba(125, 211, 252, 0.14), transparent 42%),
-      url('../src/assets/bg-texture.png');
+      radial-gradient(circle at 50% 100%, rgba(125, 211, 252, 0.14), transparent 42%);
     background-attachment: fixed;
 }
 
