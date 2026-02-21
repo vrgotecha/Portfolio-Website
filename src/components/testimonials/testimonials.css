@@ -21,6 +21,7 @@
     border: 1px solid rgba(125, 211, 252, 0.2);
     box-shadow: var(--shadow-soft);
     backdrop-filter: blur(10px);
+    transition: transform 0.7s ease, opacity 0.7s ease;
 }
 
 .client__review{

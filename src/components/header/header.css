@@ -10,9 +10,21 @@ header {
     position: relative;
 }
 
-.header__container h1 {
-    font-size: 3.2rem;
+.header__intro{
+    font-size: 1.05rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-light);
+    margin-bottom: 0.7rem;
+}
+
+.header__name {
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    font-weight: 700;
     line-height: 1.1;
+    letter-spacing: 0.01em;
+    margin: 0 auto;
+    max-width: 14ch;
     background: linear-gradient(120deg, var(--color-white), var(--color-primary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -20,7 +32,9 @@ header {
 
 .header__container .text-light {
     max-width: 40rem;
-    margin: 0.8rem auto 0;
+    margin: 1rem auto 0;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    line-height: 1.7;
 }
 
 /*  CTA */
@@ -93,6 +107,10 @@ header {
         height: 68vh;
     }
 
+    .header__intro{
+        font-size: 0.95rem;
+    }
+
     .header__highlights{
         width: min(42rem, 90%);
     }
@@ -111,5 +129,9 @@ header {
     .header__highlights{
         grid-template-columns: 1fr;
         margin-top: 2rem;
+    }
+
+    .header__name{
+        max-width: 100%;
     }
 } 
