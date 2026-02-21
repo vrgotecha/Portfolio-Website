@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import ME from '../../assets/Vivek_C-DAC_IMG-Resized.png'
+import ME from '../../assets/Vivek_After_C-DAC_IMG.jpeg'
 import { FaAward } from "react-icons/fa"
 import { FiUsers } from "react-icons/fi"
 import { VscFolderLibrary } from "react-icons/vsc"
